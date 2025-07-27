@@ -1,0 +1,118 @@
+// Testimonial Section Styles
+.section-testimonials {
+  position: relative;
+  padding: 8rem 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  opacity: 0.9;
+  &__content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5) blur(2px);
+  }
+}
+
+.section-testimonials .u-center-text {
+  position: relative;
+  z-index: 2;
+}
+
+.testimonials {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+}
+
+.testimonial-box {
+  background: rgba(223, 201, 201, 0.85);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+  width: 90%;
+  padding: 6rem 4rem;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 30px, 100% 0%, 100% 82%, 0 100%);
+  @media (max-width: 700px) {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    border-radius: 2rem;
+    clip-path: none;
+  }
+}
+
+.testimonial-img-box {
+  position: relative;
+  min-width: 120px;
+  min-height: 120px;
+  margin-right: 3rem;
+  @media (max-width: 700px) {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.testimonial-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0.5rem 2rem rgba(0,0,0,0.15);
+  transition: filter 0.3s;
+}
+
+.testimonial-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.testimonial-img-box:hover .testimonial-img,
+.testimonial-img-box:focus .testimonial-img {
+  filter: blur(2px) brightness(0.7);
+}
+.testimonial-img-box:hover .testimonial-name,
+.testimonial-img-box:focus .testimonial-name {
+  opacity: 1;
+}
+
+.testimonial-content {
+  flex: 1;
+}
+.testimonial-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.testimonial-content p {
+  font-size: 1.4rem;
+  color: #444;
+  line-height: 1.6;
+}
+

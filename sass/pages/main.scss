@@ -1,0 +1,68 @@
+@use '../abstract/variables';
+@use '../base/animations';
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f4f4;
+    color: #777;
+    line-height: 1.6;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 3rem;
+    box-sizing: border-box;
+    overflow-x: hidden; // Prevent horizontal scroll
+}
+
+.row{
+    margin:0 auto;
+
+    &:not(:last-child){
+        margin-bottom:variables.$gutter-vertical;
+    }
+
+    .col-1-of-2 {
+        width:calc((100% - #{variables.$gutter-vertical}) / 2);
+
+        &:not(:last-child) {
+            margin-right: variables.$gutter-horizontal;
+        }
+    }
+}
+
+
+
+.section-about{
+    background-color: variables.$color-grey;
+    padding: 25rem 0;
+}
+
+.section__heading-secondary{
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+  background-image: linear-gradient(to left, rgb(191, 183, 183), rgb(255, 25, 0));
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+
+  &:hover{
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem;
+  }
+}
+
+
+.teartiary-heading{
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+
+    &:not(:last-child){
+        margin-bottom: 3px;
+    }
+}

@@ -1,0 +1,51 @@
+
+@use '../abstract/variables';
+
+.btn,
+button.btn,
+input.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-transform: capitalize;
+    text-decoration: none;
+    border-radius: 3rem;
+    animation-name: moveFromBottom;
+    animation-duration: .5s;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover,
+button.btn:hover,
+input.btn:hover {
+    background-color: variables.$color-black;
+    color:variables.$color-white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active,
+button.btn:active,
+input.btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-white,
+button.btn-white,
+input.btn-white {
+    background-color:variables.$color-white;
+    color:variables.$color-black;
+    border: 2px solid variables.$color-black;
+}
+
+.btn-red,
+button.btn-red,
+input.btn-red {
+    background-color:variables.$color-primary;
+    color:variables.$color-white;
+    font-size: variables.$default-font-size;
+    border-radius: 0 !important;
+    border: 2px solid variables.$color-white;
+}

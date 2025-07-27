@@ -1,0 +1,79 @@
+@use '../abstract/variables';
+
+.form {
+
+    &__group:not(:last-child){
+        margin-bottom: 1rem;
+    }
+
+    &__input{
+        font-size:1.5rem;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        color: inherit;
+        border-color: rgba(variables.$color-white,.5);
+        border:none;
+        font-family: inherit;
+        width: 70%;
+        display: block;
+
+        &::-webkit-input-placeholder{
+            color: darkgrey;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba(variables.$color-black,.5);
+            border-bottom: 3px solid variables.$color-success;
+        }
+
+        &:focus:invalid{
+            border-bottom: 3px solid variables.$color-error;
+        }
+    }
+
+    &__textarea {
+        font-size:1.5rem;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        color: inherit;
+        border-color: rgba(variables.$color-white,.5);
+        border:none;
+        font-family: inherit;
+        width: 70%;
+        display: block;
+        min-height: 10rem;
+        resize: vertical;
+
+        &::-webkit-input-placeholder{
+            color: darkgrey;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba(variables.$color-black,.5);
+            border-bottom: 3px solid variables.$color-success;
+        }
+
+        &:focus:invalid{
+            border-bottom: 3px solid variables.$color-error;
+        }
+    }
+
+    &__label{
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem; 
+        display: block; 
+        transition: all .3s;
+    }
+
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+}

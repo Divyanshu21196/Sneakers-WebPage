@@ -1,0 +1,28 @@
+@use '../abstract/variables';
+
+.feature-box{
+    background-color: rgba(variables.$color-white,.8);
+    font-size: 1.5rem;
+    margin-top: -20vh;
+    padding:2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(variables.$color-black,.15);
+    transition: all .2s;
+    height: 20rem;
+
+    &__icon {
+        font-size: 6rem;
+        margin-bottom: .5rem;
+        background-image: linear-gradient(to left, rgb(191, 183, 183), rgb(255, 25, 0));
+        -webkit-background-clip: text;
+        display: inline;
+        color: transparent;
+    }
+
+    &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 2.5rem 4rem rgba(variables.$color-black,.5);
+    }
+   
+}

@@ -1,0 +1,104 @@
+@use './abstract/functions';
+@use './abstract/mixins';
+@use './abstract/variables';
+
+
+@use './base/base';
+@use './base/animations';
+@use './base/typography';
+@use './base/utilities';
+
+@use './pages/home';
+@use './components/button';
+@use './components/composition';
+@use './components/feature-box';
+ 
+@use './components/card';
+@use './components/testimonial';
+
+@use './components/bookings';
+@use './components/footer';
+@use './components/form';
+@use './components/navigation';
+
+header{
+    height: 95vh;
+    background-image:
+        linear-gradient(
+            to left bottom,
+             rgba(variables.$color-primary-light,0.3),
+             rgba(variables.$color-primary-dark,0.3)), 
+        url(./ChatGPT\ Image\ Jul\ 26\,\ 2025\,\ 12_44_53\ PM.png);
+    background-size: contain;
+    background-color:variables.$color-primary;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    clip-path: polygon(0 0,100% 0px,92% 100%,0px 100%);
+
+    .logo-box {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;   
+    }
+
+    .logo {
+        height: 4rem; 
+        border-radius: 50%;
+    }
+
+    .header-content {
+        position: absolute;
+        top: 62%;
+        left: 19%;
+        transform: translate(-55%, -55%);
+        text-align: center;
+
+
+        .heading-primary {
+            color:variables.$color-white;
+            text-align: center;
+            font-size: 3rem;
+            object-fit: cover;
+            animation-name: moveInLeft;
+            animation-duration: .5s;
+            animation-timing-function: ease-in;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        @media (max-width: 900px) {
+            .heading-primary {
+                font-size: 3.2rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .heading-primary {
+                font-size: 2.1rem;
+            }
+        }
+
+        .heading-primary span {
+            color: variables.$color-black;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .heading-secondary {
+            color:variables.$color-white;
+            text-align: center;
+            font-size: 4rem;
+            letter-spacing: 33px;
+            object-fit: cover;
+            animation: moveInRight;
+            animation-duration: .5s;
+            animation-timing-function: ease-in;
+        }
+
+    }
+
+}
+
+
+
+

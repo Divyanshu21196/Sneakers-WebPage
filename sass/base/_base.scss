@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after{
+    margin:0;
+    // padding: inherit;
+}
+
+
+html {
+    font-size: 62.5%; /*---- if we want 16px font size then divide 10/16 =0.625*100=62.5 */
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f4f4;
+    color: #777;
+    line-height: 1.6;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 3rem;
+    box-sizing: border-box;
+}
