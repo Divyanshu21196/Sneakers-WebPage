@@ -77,3 +77,63 @@
     }
 
 }
+
+
+  // Responsive styles for section-book
+  @media only screen and (max-width: 900px) {
+    .section-book .row {
+      flex-direction: column;
+      align-items: center;
+    }
+    .section-book .book {
+      width: 95%;
+      margin: 0 auto;
+    }
+    .section-book .book__form {
+      padding: 6rem 5rem;
+    }
+    .section-book .form {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .section-book {
+      padding: 2rem 1.5rem;
+    }
+    .section-book .row {
+      flex-direction: column;
+      align-items: center;
+    }
+    .section-book .book {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .section-book .book__form {
+     padding: 6rem 5rem;
+    }
+    .section-book .form {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+.form__group {
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    margin-bottom: 1.2rem;
+  }
+}
+
+.form__input,
+.form__textarea {
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 0.7rem;
+    box-sizing: border-box;
+  }
+}

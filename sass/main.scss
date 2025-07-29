@@ -68,16 +68,7 @@ header{
             text-overflow: ellipsis;
         }
 
-        @media (max-width: 900px) {
-            .heading-primary {
-                font-size: 3.2rem;
-            }
-        }
-        @media (max-width: 600px) {
-            .heading-primary {
-                font-size: 2.1rem;
-            }
-        }
+       
 
         .heading-primary span {
             color: variables.$color-black;
@@ -97,6 +88,29 @@ header{
 
     }
 
+}
+
+ @media (max-width: 900px) {
+            .heading-primary {
+                font-size: 3.2rem;
+                animation-name: moveInLeft;
+            }
+        }
+@media (max-width: 600px) {
+    .header .header-content .heading-primary {
+        font-size: 2rem;
+        left: 46rem;
+        margin-bottom: 40rem;
+        margin: 0px 0 2rem 24rem;
+    }
+
+    .header-content{
+        top: 78% !important;
+    }
+
+    .header-content a {
+        margin: 1rem 0 0 24rem;
+    }
 }
 
 

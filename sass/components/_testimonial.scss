@@ -4,6 +4,28 @@
   padding: 8rem 0;
   overflow: hidden;
   z-index: 1;
+
+  // Ensure button is above video background
+  .btn {
+    position: relative;
+    z-index: 3;
+    display: block;
+    margin: 2rem auto 0 auto;
+    font-size: 1.1rem;
+    padding: 1rem 2.2rem;
+    width: fit-content;
+    min-width: 60vw;
+    text-align: center;
+  }
+
+  @media (max-width: 700px) {
+    padding: 4rem 0.5rem;
+    .btn {
+      font-size: 1.1rem;
+      padding: 1rem 2.2rem;
+      min-width: 60vw;
+    }
+  }
 }
 
 .video-bg {
@@ -50,9 +72,12 @@
   clip-path: polygon(0 30px, 100% 0%, 100% 82%, 0 100%);
   @media (max-width: 700px) {
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: 2rem 0rem 2.5rem 0rem;
     border-radius: 2rem;
     clip-path: none;
+    width: 90%;
+    max-width: 100%;
+    margin: 0 auto 2rem auto;
   }
 }
 
@@ -103,16 +128,43 @@
 
 .testimonial-content {
   flex: 1;
+
+    @media (max-width: 700px) {
+    width: 100%;
+    text-align: center;
+  }
 }
 .testimonial-title {
   font-size: 1.7rem;
+  
   font-weight: 700;
   margin-bottom: 1rem;
   color: #333;
+
+  @media (max-width: 700px) {
+    font-size: 1.3rem;
+  }
 }
 .testimonial-content p {
   font-size: 1.4rem;
+
   color: #444;
   line-height: 1.6;
+
+    @media (max-width: 700px) {
+    font-size: 1.1rem;
+  }
+// Responsive button alignment for testimonial section
+    @media (max-width: 700px) {
+    .section-testimonials .btn {
+        display: block;
+        margin: 2rem auto 0 auto;
+        font-size: 1.1rem;
+        padding: 1rem 2.2rem;
+        width: fit-content;
+        min-width: 60vw;
+        text-align: center;
+    }
+    }
 }
 

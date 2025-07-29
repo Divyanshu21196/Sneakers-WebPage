@@ -1,3 +1,4 @@
+
 @use '../abstract/variables';
 
 .card {
@@ -157,7 +158,7 @@
         }
     }
 
-    &:hover &__inner {
+    &:hover > .card__inner {
         transform: rotateY(180deg);
     }
 
@@ -189,4 +190,78 @@
                 url('891821a5_34ca_4a46_9d72_fbdecf137336.webp');
         }
     }
+}
+
+// Responsive styles for section-tours cards
+@media only screen and (max-width: 900px) {
+  .section-tours .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-tours .col-1-of-3 {
+    width: 90%;
+    margin-bottom: 2.5rem;
+    margin-right: 0 !important;
+  }
+  .card {
+    height: 38rem;
+    min-width: 260px;
+    max-width: 400px;
+    margin: 0 auto 2rem auto;
+  }
+  .card__picture {
+    height: 16rem;
+  }
+  .card__heading {
+    font-size: 1.5rem;
+    top: 8rem;
+    right: 1rem;
+    width: 80%;
+  }
+  .card__details ul li {
+    font-size: 1.2rem;
+    padding: 0.7rem;
+  }
+  .btn--white {
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .section-tours {
+    padding: 2rem 0.5rem;
+  }
+  .section-tours .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-tours .col-1-of-3 {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    margin-right: 0 !important;
+  }
+  .card {
+    height: 32rem;
+    min-width: 200px;
+    max-width: 100%;
+    margin: 0 auto 1.2rem auto;
+  }
+  .card__picture {
+    height: 12rem;
+  }
+  .card__heading {
+    font-size: 1.1rem;
+    top: 5.5rem;
+    right: 0.5rem;
+    width: 90%;
+  }
+  .card__details ul li {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .btn--white {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
 }

@@ -3,13 +3,13 @@
 .feature-box{
     background-color: rgba(variables.$color-white,.8);
     font-size: 1.5rem;
-    margin-top: -20vh;
+    margin-top: 0;
     padding:2.5rem;
     text-align: center;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba(variables.$color-black,.15);
     transition: all .2s;
-    height: 20rem;
+    min-height: 16rem;
 
     &__icon {
         font-size: 6rem;
@@ -25,4 +25,69 @@
             box-shadow: 0 2.5rem 4rem rgba(variables.$color-black,.5);
     }
    
+}
+
+
+.section-features {
+    padding:36rem 4rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image:
+        linear-gradient(to left bottom, rgba(255, 252, 252, 0.3), rgba(242, 67, 45, 0.3)), url("aj1-lost-found-3.jpg");
+    clip-path: polygon(0 11%, 100% 0px, 100% 86%, 0px 100%);
+  
+  @media only screen and (max-width: 900px) {
+    padding: 8rem 1.5rem;
+    .row {
+      flex-direction: column;
+      align-items: center;
+    }
+    .col-1-of-4 {
+      width: 90%;
+      margin-bottom: 2.5rem;
+      margin-right: 0 !important;
+    }
+    .feature-box {
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+    .feature-box__icon {
+      font-size: 4rem;
+    }
+    .tertiary-heading {
+      font-size: 2rem;
+    }
+    .feature-box__text {
+      font-size: 1.4rem;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding: 10rem 5.5rem;
+    .row {
+      flex-direction: column;
+      align-items: center;
+    }
+    .col-1-of-4 {
+      width: 100%;
+      margin-bottom: 2rem;
+      margin-right: 0 !important;
+    }
+    .feature-box {
+      padding: 2rem 0.5rem;
+      margin-top: 0;
+      min-height: 12rem;
+      text-align: center;
+    }
+    .feature-box__icon {
+      font-size: 3rem;
+    }
+    .tertiary-heading {
+      font-size: 1.5rem;
+    }
+    .feature-box__text {
+      font-size: 1.2rem;
+    }
+  }
 }
